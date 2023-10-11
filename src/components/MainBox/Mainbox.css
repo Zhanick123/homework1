@@ -1,0 +1,38 @@
+.main-weather {
+    animation: weather-cold 0.4s;
+    animation-fill-mode: forwards;
+    background-size: cover;
+    background-position: top;
+    transition: 0.4 ease;
+}
+
+.main-weather.warm {
+    animation: weather-warm 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes weather-warm {
+    0% {
+        background-image: url('../../assets/cold-weather.jpg');
+    }
+
+    100% {
+        background-image: url('../../assets/warm-weather.jpg');
+    }
+}
+
+@keyframes weather-cold {
+    0% {
+        background-image: url('../../assets/warm-weather.jpg');
+    }
+
+    100% {
+        background-image: url('../../assets/cold-weather.jpg');
+    }
+}
+
+main {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+    padding: 25px;
+}
